@@ -1,0 +1,45 @@
+{
+  "approach": "C",
+  "notebook": "GNN-lite + XGBoost Ablation Study",
+  "dataset": "synthetic",
+  "seq_len": 10,
+  "k_neighbors": 4,
+  "ensemble_seeds": [
+    42,
+    123,
+    999
+  ],
+  "pi_bounds": [
+    0.05,
+    0.95
+  ],
+  "baseline": {
+    "n_lag_features": 350,
+    "MAE": 7.017045974731445,
+    "RMSE": 9.111049910342386,
+    "R2": 0.6494781374931335,
+    "pi_coverage": 0.7723880597014925,
+    "pi_mean_width": 28.465700149536133
+  },
+  "full_enriched": {
+    "n_lag_features": 690,
+    "n_spatial_features": 34,
+    "MAE": 7.106614112854004,
+    "RMSE": 9.1271146649384,
+    "R2": 0.6482409238815308,
+    "pi_coverage": 0.7873134328358209,
+    "pi_mean_width": 28.98749351501465
+  },
+  "ablation_delta": {
+    "mae_delta": -0.06551837921142578,
+    "rmse_delta": -0.12857519337379486,
+    "r2_delta": 0.013487160205841064,
+    "spatial_helps": true
+  },
+  "gaps_addressed": [
+    "Gap1_Proactive",
+    "Gap2_TTC",
+    "Gap3_Confidence",
+    "Gap4_Spatial"
+  ]
+}

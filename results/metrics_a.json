@@ -1,0 +1,46 @@
+{
+  "approach": "A",
+  "model": "TCN + MC Dropout",
+  "dataset": "synthetic",
+  "seq_len": 20,
+  "mc_passes": 50,
+  "n_features": 11,
+  "architecture": {
+    "filters": 64,
+    "kernel_size": 3,
+    "dilations": [
+      1,
+      2,
+      4
+    ],
+    "dropout_rate": 0.2
+  },
+  "training": {
+    "best_epoch": 6,
+    "best_val_mae": 0.4929715394973755,
+    "max_epochs": 150,
+    "patience": 15,
+    "batch_size": 256,
+    "lr_init": 0.0003
+  },
+  "test_metrics": {
+    "mae": 0.44612428545951843,
+    "rmse": 0.5248520370151688,
+    "r2": 0.7143830060958862,
+    "coverage_90": 1.0,
+    "mean_interval_width": 2.9313720912484285,
+    "mean_confidence": 0.5323853648882084,
+    "ece": 0.46761463511179163
+  },
+  "confidence_gating_tau_07": {},
+  "sample_counts": {
+    "train_sequences": 16536,
+    "val_sequences": 5842,
+    "test_sequences": 218
+  },
+  "gaps_addressed": [
+    1,
+    2,
+    3
+  ]
+}
